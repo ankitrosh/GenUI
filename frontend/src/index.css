@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    @apply bg-slate-50 text-slate-900;
+  }
+
+  body {
+    @apply min-h-screen bg-slate-50 text-slate-900 antialiased font-display;
+    background-image:
+      radial-gradient(circle at 12% 20%, rgba(99, 102, 241, 0.08), transparent 25%),
+      radial-gradient(circle at 88% 12%, rgba(45, 212, 191, 0.06), transparent 20%),
+      linear-gradient(180deg, rgba(248, 250, 252, 0.98), rgba(241, 245, 249, 0.96));
+    background-attachment: fixed;
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+
+  *::selection {
+    background: rgba(99, 102, 241, 0.2);
+    color: #1e293b;
+  }
+
+  /* Fullscreen elements should have light background */
+  :fullscreen,
+  :-webkit-full-screen,
+  :-moz-full-screen,
+  :-ms-fullscreen {
+    background-color: rgb(248 250 252);
+    background-image:
+      radial-gradient(circle at 12% 20%, rgba(99, 102, 241, 0.08), transparent 25%),
+      radial-gradient(circle at 88% 12%, rgba(45, 212, 191, 0.06), transparent 20%),
+      linear-gradient(180deg, rgba(248, 250, 252, 0.98), rgba(241, 245, 249, 0.96));
+  }
+}
+
+@layer components {
+  .card-surface {
+    @apply rounded-2xl border border-slate-200 bg-white shadow-[0_4px_24px_-2px_rgba(0,0,0,0.08)] ring-1 ring-slate-100;
+  }
+
+  .pill {
+    @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em];
+  }
+}
