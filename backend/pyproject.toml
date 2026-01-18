@@ -1,0 +1,13 @@
+[project]
+name = "gen-ui"
+version = "0.1.0"
+description = "FastAPI backend for the ASR prototype."
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.110",
+  "uvicorn[standard]>=0.27",
+  "openai>=1.40.0",
+  "python-dotenv>=1.0.1",
+  "sqlalchemy>=2.0.0",
+  "tokenc>=0.1.2",
+]
