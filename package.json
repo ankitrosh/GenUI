@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "genui-schema": "file:genui-schema"
+  }
+}
